@@ -1,14 +1,19 @@
 package br.com.gft.controllers;
 
+import br.com.gft.dto.compra.RegistroCompraDTO;
 import br.com.gft.entities.Compra;
+import br.com.gft.entities.Fornecedor;
 import br.com.gft.entities.ItemCompra;
 import br.com.gft.entities.Produto;
+import br.com.gft.services.CompraService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 import java.util.stream.Collectors;
+
 
 @RestController
 @RequestMapping("v1/compras")

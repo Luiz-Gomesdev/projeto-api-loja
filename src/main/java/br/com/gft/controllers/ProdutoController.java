@@ -1,7 +1,11 @@
 package br.com.gft.controllers;
 
+import br.com.gft.dto.produto.ConsultaProdutoDTO;
+import br.com.gft.dto.produto.ProdutoMapper;
+import br.com.gft.dto.produto.RegistroProdutoDTO;
 import br.com.gft.entities.Produto;
 import br.com.gft.services.ProdutoService;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;

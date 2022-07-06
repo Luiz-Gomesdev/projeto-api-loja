@@ -1,7 +1,11 @@
 package br.com.gft.controllers;
 
+import br.com.gft.dto.cliente.ClienteMapper;
+import br.com.gft.dto.cliente.ConsultaClienteDTO;
+import br.com.gft.dto.cliente.RegistroClienteDTO;
 import br.com.gft.entities.Cliente;
 import br.com.gft.services.ClienteService;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;

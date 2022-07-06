@@ -1,5 +1,8 @@
 package br.com.gft.controllers;
 
+import br.com.gft.dto.usuario.ConsultaUsuarioDTO;
+import br.com.gft.dto.usuario.RegistroUsuarioDTO;
+import br.com.gft.dto.usuario.UsuarioMapper;
 import br.com.gft.entities.Usuario;
 import br.com.gft.services.UsuarioService;
 import org.springframework.http.ResponseEntity;
