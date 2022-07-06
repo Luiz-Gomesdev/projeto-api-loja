@@ -1,0 +1,30 @@
+package br.com.gft.dto.usuario;
+
+import br.com.gft.dto.filial.FilialMapper;
+import br.com.gft.entities.Filial;
+import br.com.gft.entities.Perfil;
+import br.com.gft.entities.Usuario;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+public class UsuarioMapper {
+
+    public static Usuario fromDTO(RegistroUsuarioDTO dto) {
+
+        Perfil perfil = new Perfil();
+        perfil.setId(dto.getPerfilId());
+
+        Filial filial = new Filial();
+        filial.setId(dto.getFilialId());
+
+        return new Usuario(null, dto.getEmail(), new BCryptPasswordEncoder().encode(dto.getSenha()),
+                perfil, filial);
+
+    }
+
+    public static ConsultaUsuarioDTO fromEntity(Usuario usuario) {
+
+        return new ConsultaUsuarioDTO(usuario.getEmail(), usuario.getPerfil().getNome(), FilialMapper.
+                fromEntity(usuario.getFilial()));
+
+    }
+}
