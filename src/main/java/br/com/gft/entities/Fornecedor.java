@@ -1,6 +1,11 @@
 package br.com.gft.entities;
 
-import javax.persistence.*;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_fornecedor")
@@ -21,8 +26,17 @@ public class Fornecedor {
     @Embedded
     private Endereco endereco;
 
+
     public Fornecedor() {
     }
+
+
+
+    public Fornecedor(Long id) {
+        this.id = id;
+    }
+
+
 
     public Fornecedor(Long id, String cnpj, String nome, String telefone, String email, Endereco endereco) {
         this.id = id;

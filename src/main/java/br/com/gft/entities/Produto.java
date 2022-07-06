@@ -26,6 +26,9 @@ public class Produto {
         this.unidade = unidade;
     }
 
+    public Produto(Long produtoId) {
+    }
+
     public Long getId() {
         return id;
     }
